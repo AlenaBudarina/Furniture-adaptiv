@@ -1,0 +1,440 @@
+* {
+    /*outline: 1px solid red;*/
+}
+
+.root {
+    min-width: 360px;
+    max-width: 1400px;
+    background-color: #E7E7E7;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.pic-header {
+    min-height: 700px;
+    width: 100%;
+    /* max-width: 100%; */
+    background-size: cover;
+    display: grid;
+    grid-template-columns: 100px 1fr 100px 100px;
+    grid-template-rows: 80px 1fr;
+    grid-template-areas:
+        "logo navigation Login-but Signup-but"
+        ". title title .";
+}
+
+.logo {
+    font-family: 'DM Sans', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 23px;
+    color: #FFFFFF;
+    display: grid;
+    grid-area: logo;
+    align-content: center;
+    justify-content: center;
+}
+
+.menu {
+    font-family: 'DM Sans', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 21px;
+    color: #FFFFFF;
+    text-decoration: none;
+    display: grid;
+    grid-area: navigation;
+}
+
+.Login-but,
+.Signup-but {
+    width: 77px;
+    height: 41px;
+    font-family: 'DM Sans', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 21px;
+    color: #FFFFFF;
+    border-radius: 10px;
+    align-items: center;
+    align-self: center;
+    justify-self: center;
+}
+
+.Login-but {
+    border: 1px solid white;
+    background-color: rgba(28, 28, 28, 0);
+    display: grid;
+    grid-area: Login-but;
+}
+
+.Signup-but {
+    border: 1px solid #D4B170;
+    background: #D4B170;
+    display: grid;
+    grid-area: Signup-but;
+}
+
+.header-1 {
+    font-family: 'DM Sans', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 70px;
+    line-height: 104px;
+    text-align: center;
+    color: #FFFFFF;
+    margin: 0;
+    display: grid;
+    grid-area: title;
+    align-content: center;
+    padding-bottom: 200px;
+}
+
+.main-top {
+    min-height: 200px;
+    width: 100%;
+    background-color: #D9D9D9;
+    display: flex;
+    flex-direction: row;
+
+    /*display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;*/
+    /* grid-template-rows: 150px 1fr 100px 100px;*/
+    /*column-gap: 20px;*/
+    /*grid-template-areas:
+        " . header-2 . . . ."
+        " . article card__item-1 card__item-2 card__item-3 . "
+        " . article card__item-1 card__item-2 card__item-3 . "
+        " . . . . . .";*/
+}
+
+.card__block-text {
+    flex-basis: 25%;
+    padding: 20px 50px;
+}
+
+.card__item {
+    flex-basis: 25%;
+    margin: 20px 0;
+}
+
+.card__img {
+    width: 100%;
+    height: 367px;
+    object-fit: contain;
+    object-position: 50% 80%;
+}
+
+.header-2,
+.article,
+.name {
+    font-family: 'DM Sans', sans-serif;
+    font-style: normal;
+    color: #000000;
+}
+
+.header-2 {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 39px;
+    margin: 0;
+    grid-area: header-2;
+    align-self: center;
+}
+
+.article {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 30px;
+    grid-area: article;
+}
+
+.name {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 23px;
+    margin: 0;
+    text-align: center;
+}
+
+.main-bottom {
+    min-height: 900px;
+    width: 100%;
+    background: #A4A4A3;
+    display: grid;
+    grid-template-columns: 50px 1fr 100px 1fr;
+    grid-template-areas:
+        ". message . telephone "
+        ". form-name . telephone "
+        ". form-mobile . telephone "
+        ". form-message . telephone "
+        ". send . telephone ";
+}
+
+.message {
+    font-family: 'DM Sans', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 62px;
+    color: #FFFFFF;
+    margin: 30px 0 0 0;
+    grid-area: message;
+    display: flex;
+}
+
+.form {
+    width: 90%;
+    height: 80px;
+    border-radius: 10px;
+    font-family: 'DM Sans', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 31px;
+    color: #ffffff;
+    outline: none;
+    border: none;
+    margin-top: 20px;
+}
+
+#field.form {
+    height: 240px;
+}
+
+.send {
+    width: 86px;
+    height: 41px;
+    background: #040404;
+    border-radius: 10px;
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 21px;
+    color: #FFFFFF;
+    grid-area: send;
+    justify-self: end;
+}
+
+.footer {
+    width: 100%;
+    min-height: 350px;
+    background-color: #FFFFFF;
+    display: grid;
+    grid-template-columns: 70px 200px 70px 250px 70px 1fr 70px;
+    grid-template-rows: 70px 1fr 30px;
+    grid-template-areas:
+        ". . . . . . ."
+        ". company-1 . company-2 . company-3 ."
+        "footer-bottom footer-bottom footer-bottom footer-bottom footer-bottom  footer-bottom footer-bottom";
+}
+
+.list {
+    font-family: 'DM Sans', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 31px;
+    color: #000000;
+    text-decoration: none;
+    width: 260px;
+    margin: 0px;
+}
+
+.send-but {
+    width: 130px;
+    height: 65px;
+    background: #000000;
+    border-radius: 10px;
+    font-family: 'DM Sans', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 31px;
+    text-align: center;
+    color: #FFFFFF;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.footer-bottom {
+    width: 100%px;
+    min-height: 30px;
+    font-family: 'DM Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 20px;
+    color: #FFFFFF;
+    background-color: #000;
+    grid-area: footer-bottom;
+}
+
+.nav {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-areas: ". . . . . home about-as furniture contact-us";
+    text-align: center;
+    align-content: center;
+}
+
+.home {
+    grid-area: home;
+}
+
+.about-as {
+    grid-area: about-as;
+}
+
+.furniture {
+    grid-area: furniture;
+}
+
+.contact-us {
+    grid-area: contact-us;
+}
+
+.form-name {
+    grid-area: form-name;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-text {
+    width: 200px;
+    height: 31px;
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 31px;
+    color: #FFFFFF;
+}
+
+.form-mobile {
+    grid-area: form-mobile;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-message {
+    grid-area: form-message;
+    display: flex;
+    flex-direction: column;
+}
+
+.telephone {
+    grid-area: telephone;
+    display: flex;
+    align-self: center;
+    /*padding-left: 10%;*/
+    width: 80%;
+}
+
+.company-1 {
+    grid-area: company-1;
+    display: flex;
+    flex-direction: column;
+}
+
+.company-2 {
+    grid-area: company-2;
+    display: flex;
+    flex-direction: column;
+}
+
+.company-3 {
+    grid-area: company-3;
+}
+
+#send-form.form {
+    background-color: #E7E7E7;
+}
+
+@media screen and (max-width: 1024px) {
+    .menu {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .menu {
+        display: none;
+    }
+
+    .header-1 {
+        font-size: 50px;
+    }
+
+    .main-top {
+        min-height: 30vh;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .main-bottom {
+        display: flex;
+        flex-direction: column;
+        padding-left: 3%;
+    }
+
+    .telephone {
+        width: 70%;
+        margin-bottom: 10%;
+        margin-left: 0;
+        margin-right: auto;
+    }
+
+    .form {
+        padding-bottom: 3%;
+    }
+
+    .send {
+        margin: 8% 0;
+    }
+
+    .footer {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .company-1 {
+        width: 350px;
+        margin: 20px 20px;
+    }
+
+    .company-2 {
+        width: 350px;
+        margin: 20px 20px;
+    }
+
+    .company-3 {
+        width: 350px;
+        margin: 20px 20px;
+    }
+
+    .form-name,
+    .form-text,
+    .form-mobile {
+        margin: 10px 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .menu {
+        font-size: 12px;
+    }
+
+    .footer {
+        grid-template-columns: 10px 150px 10px 200px 10px 1fr 10px;
+    }
+
+    .list {
+        font-size: 18px;
+    }
+}
